@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MP3Player</string>
+    <string name="close">Kill Service</string>
+</resources>

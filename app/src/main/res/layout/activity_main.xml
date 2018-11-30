@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ListView
+        android:id="@+id/playList"
+        android:layout_width="368dp"
+        android:layout_height="331dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#D3D3D3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playPause"
+        android:layout_width="100dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="48dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickPlayPause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toEndOf="@+id/prev"
+        app:srcCompat="@drawable/play" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="77dp"
+        android:layout_height="117dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="44dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/next" />
+
+    <ImageButton
+        android:id="@+id/prev"
+        android:layout_width="77dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="44dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickPrev"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/previous" />
+
+    <SeekBar
+        android:id="@+id/progBar"
+        android:layout_width="245dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/playPause"
+        app:layout_constraintEnd_toStartOf="@+id/end" />
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="57dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickStop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/stop" />
+
+</android.support.constraint.ConstraintLayout>
